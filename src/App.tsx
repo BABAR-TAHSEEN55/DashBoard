@@ -1,18 +1,17 @@
 // import { Button } from "./components/ui/button";
 // import { CircuitBoard } from "lucide-react";
+
+import AppSidebar from "./components/AppSidebar";
 import Navbar from "./components/Navbar";
 
 const App = () => {
 	return (
-		<div>
-			<Navbar />
+		<div className="flex w-full">
+			<AppSidebar />
+			<div className="w-full">
+				<Navbar />
+			</div>
 		</div>
-		// <div className="min-h-screen grid place-items-center">
-		// 	<Button variant="Legendary" size="lg" className="rounded-xl text-custom-color ">
-		// 		<CircuitBoard />
-		// 		Click Me
-		// 	</Button>
-		// </div>
 	);
 };
 

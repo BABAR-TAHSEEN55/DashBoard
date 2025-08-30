@@ -1,4 +1,4 @@
-import { LogOut, Moon, Settings, Sun, User } from "lucide-react";
+import { LayoutDashboard, LogOut, Moon, Settings, Sun, User } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { DropdownMenu } from "./ui/dropdown-menu";
 import {
@@ -10,16 +10,23 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Button } from "./ui/button";
 import { useTheme } from "./ThemeProvider";
+import { SidebarTrigger } from "./ui/sidebar";
 
 const Navbar = () => {
 	const { setTheme } = useTheme();
+	//You can use Cutom Button with useSidebar Hook
+	// const { toggleSidebar } = useSidebar();
 	return (
 		<nav>
 			<div className="container flex m-auto  justify-between mt-4 rounded-xl px-2 items-center">
-				<p>Home</p>
-				<p>Pricing</p>
+				<SidebarTrigger />
+				{/*<Button variant="outline" onClick={toggleSidebar}>
+					Custom Button
+				</Button>*/}
+				{/*<p>Pricing</p>*/}
 				<div className="flex justify-between items-center gap-4">
-					<p>DashBoard</p>
+					{/*<p>DashBoard</p>*/}
+					<LayoutDashboard />
 					{/*<Moon />*/}
 					<DropdownMenu>
 						<DropdownMenuTrigger asChild>
