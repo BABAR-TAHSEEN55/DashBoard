@@ -144,3 +144,5 @@ const AppSidebar = () => {
 export default AppSidebar;
 
 //Add a collapsible On Project
+
+//TIP : Look at the format when using NextJs
