@@ -1,69 +1,100 @@
-# React + TypeScript + Vite
+# DashBoard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive analytics dashboard built with React, TypeScript, and Vite. It provides a clean interface for visualizing data through charts, tracking transactions, managing content, and navigating a calendar — all within a collapsible sidebar layout with dark and light theme support.
 
-Currently, two official plugins are available:
+## About
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+DashBoard is a frontend project focused on building a practical, component-driven admin interface. It was built to explore and demonstrate the integration of shadcn/ui primitives, Recharts data visualization, and Tailwind CSS within a React and TypeScript application. The layout features a persistent collapsible sidebar, a top navigation bar with theme switching and a user menu, and a responsive grid of dashboard widgets. It serves as a strong foundation for any data-heavy web application.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Collapsible sidebar with navigation links and project management entries
+- Top navigation bar with light, dark, and system theme toggle
+- User profile dropdown with account, settings, and logout options
+- Bar chart displaying monthly expenses and savings
+- Area chart for trend visualization
+- Pie chart for categorical data breakdown
+- Card lists for latest transactions and popular content
+- Calendar widget for date navigation
+- Fully responsive grid layout that adapts from single-column to four-column views
+- Built with accessible Radix UI components via shadcn/ui
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+| Technology | Purpose |
+|---|---|
+| React 19 | UI framework |
+| TypeScript | Type safety |
+| Vite | Build tool and dev server |
+| Tailwind CSS 4 | Utility-first styling |
+| shadcn/ui (Radix UI) | Accessible component primitives |
+| Recharts | Data visualization |
+| Lucide React | Icon library |
+| date-fns | Date utilities |
+| react-day-picker | Calendar component |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18 or higher
+- pnpm (recommended), npm, or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/BABAR-TAHSEEN55/DashBoard.git
+cd DashBoard
+
+# Install dependencies
+pnpm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Running the Development Server
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+pnpm dev
+```
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Building for Production
+
+```bash
+pnpm build
+```
+
+The output will be in the `dist` directory.
+
+### Preview the Production Build
+
+```bash
+pnpm preview
+```
+
+## Project Structure
+
+```
+src/
+  components/
+    AppArea.tsx          # Area chart widget
+    AppCalendar.tsx      # Calendar widget
+    AppCharts.tsx        # Bar chart widget
+    AppSidebar.tsx       # Collapsible sidebar
+    AreaPieChart.tsx     # Pie chart widget
+    CardList.tsx         # Transaction and content card list
+    CustomButton.tsx     # Reusable button component
+    HomePage.tsx         # Main dashboard grid layout
+    Navbar.tsx           # Top navigation bar
+    ThemeProvider.tsx    # Dark/light theme context
+    ui/                  # shadcn/ui base components
+  lib/                   # Utility functions
+  main.tsx               # Application entry point
+```
+
+## Linting
+
+```bash
+pnpm lint
 ```
