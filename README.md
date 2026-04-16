@@ -4,7 +4,10 @@ A modern, responsive analytics dashboard built with React, TypeScript, and Vite.
 
 ## About
 
-DashBoard is a frontend project focused on building a practical, component-driven admin interface. It was built to explore and demonstrate the integration of shadcn/ui primitives, Recharts data visualization, and Tailwind CSS within a React and TypeScript application. The layout features a persistent collapsible sidebar, a top navigation bar with theme switching and a user menu, and a responsive grid of dashboard widgets. It serves as a strong foundation for any data-heavy web application.
+DashBoard is a modern analytics dashboard built with React, TypeScript, and Tailwind CSS.
+It features a collapsible sidebar, a top navbar with dark/light theme switching, and a user profile menu.
+Data is visualized through bar, area, and pie charts powered by Recharts, alongside transaction and content card lists.
+A calendar widget and a fully responsive grid layout round out the interface, making it a solid foundation for any data-heavy web app.
 
 ## Features
 
